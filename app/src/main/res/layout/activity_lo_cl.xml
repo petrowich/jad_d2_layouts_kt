@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loCL">
+
+    <TextView
+        android:id="@+id/tvTextForAllWidth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#5da5e8"
+        android:gravity="center_horizontal"
+        android:paddingVertical="15dp"
+        android:text="Text for all width"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSmallText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#eade65"
+        android:paddingVertical="15dp"
+        android:text="Small Text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvTextForOtherView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextForAllWidth" />
+
+    <TextView
+        android:id="@+id/tvTextForOtherView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#62e96e"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:text="Text for other view"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSmallText"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextForAllWidth" />
+
+    <TextView
+        android:id="@+id/tvOnlyOnCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#d661e8"
+        android:padding="10dp"
+        android:text="Only on center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSmallText" />
+
+    <TextView
+        android:id="@+id/tvBigText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#020346"
+        android:text="BigText"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnlyOnCenter" />
+
+    <TextView
+        android:id="@+id/tvBaseLineAsInBigText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#62e96e"
+        android:text="Base line as in BigText"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvBigText"
+        app:layout_constraintStart_toEndOf="@+id/tvBigText"/>
+
+    <TextView
+        android:id="@+id/tvSizeForAllScreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#e98936"
+        android:gravity="center"
+        android:text="Size for all screen"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBigText" />
+
+
+</android.support.constraint.ConstraintLayout>
